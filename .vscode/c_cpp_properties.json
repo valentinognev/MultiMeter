@@ -18,7 +18,9 @@
                 "${workspaceFolder}/Project/Inc/ADXL345",
                 "${workspaceFolder}/Project/Inc/BMP085",
                 "${workspaceFolder}/Project/Inc/VL53L5CX",
-                "${workspaceFolder}/Project/Inc/QMC5883L"
+                "${workspaceFolder}/Project/Inc/QMC5883L",
+                "${workspaceFolder}/Project/Inc/MPU9250",
+                "${workspaceFolder}/Project/Inc/AK8963"
             ],
             "defines": [
                 "STM32F411xE",

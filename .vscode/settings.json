@@ -9,6 +9,7 @@
         "swo.h": "c",
         "nmea.h": "c",
         "main.h": "c",
-        "lcd_driver.h": "c"
+        "lcd_driver.h": "c",
+        "cmath": "cpp"
     }
 }

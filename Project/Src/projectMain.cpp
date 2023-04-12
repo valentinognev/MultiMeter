@@ -10,9 +10,16 @@
 
 void projectMain()
 {
-	QMC5883Ltest();
-	HMC5883Ltest();
-	mpu6050test();
+    AK8963test();
+    MPU6050DMP6test();
+    MPU6050Kalmantest();
+    MPU9250Kalmantest();
+    MPU6050Madgwicktest();
+    MPU9250Madgwicktest();
+    
+    QMC5883Ltest();
+    HMC5883Ltest();
+	MPU6050test();
 
     BMP085test();
     ADXL345test ();
