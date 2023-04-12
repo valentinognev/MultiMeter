@@ -29,17 +29,18 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 
-#include "stm32f4xx_ll_dma.h"
 #include "stm32f4xx_ll_i2c.h"
+#include "stm32f4xx_ll_tim.h"
+#include "stm32f4xx_ll_usart.h"
 #include "stm32f4xx_ll_rcc.h"
-#include "stm32f4xx_ll_bus.h"
 #include "stm32f4xx_ll_system.h"
+#include "stm32f4xx_ll_gpio.h"
 #include "stm32f4xx_ll_exti.h"
+#include "stm32f4xx_ll_bus.h"
 #include "stm32f4xx_ll_cortex.h"
 #include "stm32f4xx_ll_utils.h"
 #include "stm32f4xx_ll_pwr.h"
-#include "stm32f4xx_ll_usart.h"
-#include "stm32f4xx_ll_gpio.h"
+#include "stm32f4xx_ll_dma.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -75,10 +76,24 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define led_Pin LL_GPIO_PIN_13
-#define led_GPIO_Port GPIOC
-#define btn_Pin LL_GPIO_PIN_0
-#define btn_GPIO_Port GPIOA
+#define GPS_TX_Pin LL_GPIO_PIN_2
+#define GPS_TX_GPIO_Port GPIOA
+#define GPS_RX_Pin LL_GPIO_PIN_3
+#define GPS_RX_GPIO_Port GPIOA
+#define GPS_RST_Pin LL_GPIO_PIN_4
+#define GPS_RST_GPIO_Port GPIOA
+#define LCD_BLK_Pin LL_GPIO_PIN_0
+#define LCD_BLK_GPIO_Port GPIOB
+#define LCD_RS_Pin LL_GPIO_PIN_1
+#define LCD_RS_GPIO_Port GPIOB
+#define LCD_CS_Pin LL_GPIO_PIN_12
+#define LCD_CS_GPIO_Port GPIOB
+#define LCD_SCL_Pin LL_GPIO_PIN_13
+#define LCD_SCL_GPIO_Port GPIOB
+#define LCD_RST_Pin LL_GPIO_PIN_14
+#define LCD_RST_GPIO_Port GPIOB
+#define LCD_SDI_Pin LL_GPIO_PIN_15
+#define LCD_SDI_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

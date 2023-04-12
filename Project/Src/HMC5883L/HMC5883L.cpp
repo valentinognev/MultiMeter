@@ -112,7 +112,7 @@ hmc5883l_range_t HMC5883L::getRange(void)
 
 void HMC5883L::setMeasurementMode(hmc5883l_mode_t mode)
 {
-  uint8_t value;
+  uint8_t value = 0;
 
   value = readRegister8(HMC5883L_REG_MODE);
   value &= 0b11111100;
@@ -123,7 +123,7 @@ void HMC5883L::setMeasurementMode(hmc5883l_mode_t mode)
 
 hmc5883l_mode_t HMC5883L::getMeasurementMode(void)
 {
-  uint8_t value;
+  uint8_t value = 0;
 
   value = readRegister8(HMC5883L_REG_MODE);
   value &= 0b00000011;
@@ -133,7 +133,7 @@ hmc5883l_mode_t HMC5883L::getMeasurementMode(void)
 
 void HMC5883L::setDataRate(hmc5883l_dataRate_t dataRate)
 {
-  uint8_t value;
+  uint8_t value = 0;
 
   value = readRegister8(HMC5883L_REG_CONFIG_A);
   value &= 0b11100011;
@@ -144,7 +144,7 @@ void HMC5883L::setDataRate(hmc5883l_dataRate_t dataRate)
 
 hmc5883l_dataRate_t HMC5883L::getDataRate(void)
 {
-  uint8_t value;
+  uint8_t value = 0;
 
   value = readRegister8(HMC5883L_REG_CONFIG_A);
   value &= 0b00011100;
@@ -155,7 +155,7 @@ hmc5883l_dataRate_t HMC5883L::getDataRate(void)
 
 void HMC5883L::setSamples(hmc5883l_samples_t samples)
 {
-  uint8_t value;
+  uint8_t value = 0;
 
   value = readRegister8(HMC5883L_REG_CONFIG_A);
   value &= 0b10011111;
@@ -166,7 +166,7 @@ void HMC5883L::setSamples(hmc5883l_samples_t samples)
 
 hmc5883l_samples_t HMC5883L::getSamples(void)
 {
-  uint8_t value;
+  uint8_t value = 0;
 
   value = readRegister8(HMC5883L_REG_CONFIG_A);
   value &= 0b01100000;
@@ -184,7 +184,7 @@ void HMC5883L::writeRegister8(uint8_t reg, uint8_t value)
 // Read byte to register
 uint8_t HMC5883L::fastRegister8(uint8_t reg)
 {
-  uint8_t value;
+  uint8_t value = 0;
   i2cdev.readByte(HMC5883L_ADDRESS, reg, &value);
 
   return value;
@@ -193,7 +193,7 @@ uint8_t HMC5883L::fastRegister8(uint8_t reg)
 // Read byte from register
 uint8_t HMC5883L::readRegister8(uint8_t reg)
 {
-  uint8_t value;
+  uint8_t value = 0;
   i2cdev.readByte(HMC5883L_ADDRESS, reg, &value);
 
   return value;
@@ -202,7 +202,7 @@ uint8_t HMC5883L::readRegister8(uint8_t reg)
 // Read word from register
 int16_t HMC5883L::readRegister16(uint8_t reg)
 {
-  uint16_t value;
+  uint16_t value = 0;
   i2cdev.readWord(HMC5883L_ADDRESS, reg, &value);
 
   return value;

@@ -312,11 +312,11 @@ void I2C1_EV_IRQHandler(void)
         /* Clear ADDR flag value in ISR register */
         LL_I2C_ClearFlag_ADDR(I2C1);
     }
-    /* USER CODE END I2C1_EV_IRQn 0 */
+  /* USER CODE END I2C1_EV_IRQn 0 */
 
-    /* USER CODE BEGIN I2C1_EV_IRQn 1 */
+  /* USER CODE BEGIN I2C1_EV_IRQn 1 */
 
-    /* USER CODE END I2C1_EV_IRQn 1 */
+  /* USER CODE END I2C1_EV_IRQn 1 */
 }
 
 /**
@@ -326,11 +326,24 @@ void I2C1_ER_IRQHandler(void)
 {
   /* USER CODE BEGIN I2C1_ER_IRQn 0 */
     Error_Callback();
-    /* USER CODE END I2C1_ER_IRQn 0 */
+  /* USER CODE END I2C1_ER_IRQn 0 */
 
-    /* USER CODE BEGIN I2C1_ER_IRQn 1 */
+  /* USER CODE BEGIN I2C1_ER_IRQn 1 */
 
-    /* USER CODE END I2C1_ER_IRQn 1 */
+  /* USER CODE END I2C1_ER_IRQn 1 */
+}
+
+/**
+  * @brief This function handles USART1 global interrupt.
+  */
+void USART1_IRQHandler(void)
+{
+  /* USER CODE BEGIN USART1_IRQn 0 */
+
+  /* USER CODE END USART1_IRQn 0 */
+  /* USER CODE BEGIN USART1_IRQn 1 */
+
+  /* USER CODE END USART1_IRQn 1 */
 }
 
 /**

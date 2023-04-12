@@ -10,13 +10,16 @@
 
 void projectMain()
 {
-	HMC5883LTest();
+	QMC5883Ltest();
+	HMC5883Ltest();
 	mpu6050test();
-	ADXL345test ();
-	BMP085test();
-	
-	while (true)
-	{
+
+    BMP085test();
+    ADXL345test ();
+    VL53L5CXtest();
+    
+    while (true)
+    {
         PrintString("Hello, world!\n");
         LL_mDelay(1000);
     }

@@ -38,6 +38,8 @@ THE SOFTWARE.
 #include "main.h"
 #include <stdint.h>
 
+typedef uint8_t byte;
+
 /** Default readTimeout value for read operations.
  */
 #define I2CDEV_DEFAULT_READ_TIMEOUT 1000

@@ -13,12 +13,12 @@
 #include "SensorTestRoutines.h"
 
 
-HMC5883L compass;
+static HMC5883L compass;
 void checkSettings() ;
 static void loop();
 
 
-void HMC5883LTest()
+void HMC5883Ltest()
 {
     // Initialize HMC5883L
     PrintString("Initialize HMC5883L");
@@ -170,7 +170,8 @@ static void loop()
     Vector norm = compass.readNormalize();
 
     char buf[100];
-    sprintf(buf, "Xraw = %d Yraw = %d Zraw = %d Xnorm = %f Ynorm = %f ZNorm = %f", raw.XAxis, raw.YAxis, raw.ZAxis, norm.XAxis, norm.YAxis, norm.ZAxis);
+    sprintf(buf, "Xnorm = %f Ynorm = %f ZNorm = %f\n", norm.XAxis, norm.YAxis, norm.ZAxis);
+    PrintString(buf);
 
-    LL_mDelay(100);
+    LL_mDelay(500);
 }

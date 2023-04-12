@@ -87,5 +87,5 @@ static void loop()
     sprintf(buf, " absoluteAltitude = %.2f m, relativeAltitude = %.2f m", absoluteAltitude, relativeAltitude);
     PrintString(buf);
 
-    LL_mDelay(1000);
+    LL_mDelay(100);
 }
